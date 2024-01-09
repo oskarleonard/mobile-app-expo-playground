@@ -39,3 +39,8 @@ yarn-error.*
 
 expo-env.d.ts
 # @end expo-cli
+
+# Folder for having locals notes in the project
+_localnotes
+
+.idea
