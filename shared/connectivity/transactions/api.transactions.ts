@@ -1,8 +1,11 @@
 import type { AxiosRequestConfig } from 'axios';
 
-import { API_V3, getBaseRequestConfig } from '~/connectivity/baseRequestConfig';
-import httpRequest from '~/connectivity/httpRequest';
-import type { TransactionsResponse } from '~/connectivity/transactions/api.transactions.types';
+import {
+  API_V3,
+  getBaseRequestConfig,
+} from '~/shared/connectivity/baseRequestConfig';
+import httpRequest from '~/shared/connectivity/httpRequest';
+import type { TransactionsResponse } from '~/shared/connectivity/transactions/api.transactions.types';
 
 export interface TransactionsParams {
   transactionID?: string;

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import HttpApiCallError from './HttpApiCallError';
 
-import { getFormattedHttpReqError } from '~/connectivity/connectivityUtils';
+import { getFormattedHttpReqError } from '~/shared/connectivity/connectivityUtils';
 
 export default function httpRequest(requestConfig: AxiosRequestConfig = {}) {
   return axios(requestConfig).then(

@@ -2,9 +2,9 @@ import { Link } from 'expo-router';
 import React from 'react';
 import { Pressable } from 'react-native';
 
-import { Text } from '~/components/atoms';
-import type { Transaction } from '~/connectivity/transactions/api.transactions.types';
-import { useStore } from '~/state/store';
+import { Text } from '~/shared/components/atoms';
+import type { Transaction } from '~/shared/connectivity/transactions/api.transactions.types';
+import { useStore } from '~/shared/state/store';
 
 const TransactionRow = ({ transaction }: { transaction: Transaction }) => {
   const isDiscreteMode = useStore((state) => state.isDiscreteMode);

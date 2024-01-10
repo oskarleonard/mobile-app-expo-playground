@@ -1,7 +1,7 @@
-import { SafeAreaView, Text, View } from "react-native";
-import { Stack, useGlobalSearchParams } from "expo-router";
+import { Stack, useGlobalSearchParams } from 'expo-router';
+import { SafeAreaView, Text, View } from 'react-native';
 
-import { useTransactions } from "~/modules/transaction/queries/useTransactions";
+import { useTransactions } from '~/modules/transaction/queries/useTransactions';
 
 export default function Transactions() {
   const { id } = useGlobalSearchParams<{ id: string }>();

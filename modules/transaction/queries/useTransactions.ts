@@ -1,9 +1,9 @@
-import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from '@tanstack/react-query';
 
-import type { TransactionsParams } from "~/connectivity/transactions/api.transactions";
-import { fetchTransactions } from "~/connectivity/transactions/api.transactions";
+import type { TransactionsParams } from '~/shared/connectivity/transactions/api.transactions';
+import { fetchTransactions } from '~/shared/connectivity/transactions/api.transactions';
 
-export const QUERY_KEY_TRANSACTIONS = "QUERY_KEY_TRANSACTIONS";
+export const QUERY_KEY_TRANSACTIONS = 'QUERY_KEY_TRANSACTIONS';
 
 export function useTransactions({
   networkParams,

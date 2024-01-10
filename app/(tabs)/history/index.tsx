@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ExpandingView, Text } from '~/components/atoms';
 import { TransactionTable } from '~/modules/transaction/components/transactionTable/TransactionTable';
+import { ExpandingView, Text } from '~/shared/components/atoms';
 
 const HistoryPage = () => {
   return (

@@ -1,4 +1,4 @@
-import type { MetadataLists } from '~/connectivity/api.common.types';
+import type { MetadataLists } from '~/shared/connectivity/api.common.types';
 
 export interface TransactionsResponse {
   data: Transaction[];

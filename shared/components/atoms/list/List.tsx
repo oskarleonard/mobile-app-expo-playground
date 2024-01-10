@@ -2,7 +2,7 @@ import type { FlashListProps } from '@shopify/flash-list';
 import { FlashList } from '@shopify/flash-list';
 import React from 'react';
 
-import { ExpandingView } from '~/components/atoms/expandingView/ExpandingView';
+import { ExpandingView } from '~/shared/components/atoms/expandingView/ExpandingView';
 
 const List = <T,>({
   className,

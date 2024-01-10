@@ -1,16 +1,15 @@
-import { useColorScheme } from 'nativewind';
 import React from 'react';
 import { View } from 'react-native';
 
-import { ExpandingView, SwitchButton, Text } from '~/components/atoms';
 import { TransactionTable } from '~/modules/transaction/components/transactionTable/TransactionTable';
-import { useExtendedStore, useStore } from '~/state/store';
+import { ExpandingView, SwitchButton, Text } from '~/shared/components/atoms';
+import { useExtendedStore, useStore } from '~/shared/state/store';
 
 const SettingPage = () => {
   return (
     <ExpandingView className="pt-20 dark:bg-gray-900">
       <View className="px-10">
-        <Text className="text-2xl">SettingPage</Text>
+        <Text className="text-2xl md:text-6xl">SettingPage</Text>
         <View className="mt-10 flex flex-row justify-between items-center">
           <Text>Dark mode</Text>
           <ToggleColorScheme />
@@ -38,7 +37,6 @@ export default SettingPage;
 function ToggleDiscreteMode({ className }: { className?: string }) {
   const toggleDiscreteMode = useStore((state) => state.toggleDiscreteMode);
   const isDiscreteMode = useStore((state) => state.isDiscreteMode);
-  console.log('isDiscreteMode', isDiscreteMode);
 
   return (
     <SwitchButton

@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { ExpandingView } from '~/components/atoms/expandingView/ExpandingView';
-import { List } from '~/components/atoms/list/List';
 import { TransactionRow } from '~/modules/transaction/components/transactionTable/transactionRow/TransactionRow';
 import { useTransactions } from '~/modules/transaction/queries/useTransactions';
+import { ExpandingView, List } from '~/shared/components/atoms';
 
 const TransactionTable = ({ className, address, limit }: TransactionProps) => {
   const { transactions } = useTransactions({

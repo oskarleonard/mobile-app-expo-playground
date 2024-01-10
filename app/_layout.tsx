@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import './global.css';
 
-import { usePersistedColorScheme } from '~/state/store';
+import { usePersistedColorScheme } from '~/shared/state/store';
 
 const RootLayout = () => {
   const [queryClient] = useState(() => new QueryClient());
