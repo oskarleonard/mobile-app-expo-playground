@@ -2,8 +2,11 @@ import React from 'react';
 import { View } from 'react-native';
 
 import { TransactionTable } from '~/modules/transaction/components/transactionTable/TransactionTable';
-import { ExpandingView, SwitchButton, Text } from '~/shared/components/atoms';
-import { useExtendedStore, useStore } from '~/shared/state/store';
+import { ExpandingView, Text } from '~/shared/components/atoms';
+import {
+  ToggleColorScheme,
+  ToggleDiscreteMode,
+} from '~/shared/components/molecules';
 
 const SettingPage = () => {
   return (
@@ -33,32 +36,3 @@ const SettingPage = () => {
 };
 
 export default SettingPage;
-
-function ToggleDiscreteMode({ className }: { className?: string }) {
-  const toggleDiscreteMode = useStore((state) => state.toggleDiscreteMode);
-  const isDiscreteMode = useStore((state) => state.isDiscreteMode);
-
-  return (
-    <SwitchButton
-      className={className}
-      onValueChange={toggleDiscreteMode}
-      isEnabled={isDiscreteMode}
-    />
-  );
-}
-
-function ToggleColorScheme({ className }: { className?: string }) {
-  const { toggleAndPersistColorScheme, colorScheme } = useExtendedStore();
-
-  function toggle() {
-    toggleAndPersistColorScheme();
-  }
-
-  return (
-    <SwitchButton
-      className={className}
-      onValueChange={toggle}
-      isEnabled={colorScheme === 'dark'}
-    />
-  );
-}
